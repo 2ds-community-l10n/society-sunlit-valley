@@ -1,9 +1,9 @@
 {
-  "advancement.create.diving_suit_lava.desc": "Attempt to take a dive in lava with your iridium diving gear",
-  "block.create.netherite_backtank": "Lavaproof Backtank",
-  "item.create.netherite_backtank": "Lavaproof Backtank",
-  "item.create.netherite_backtank_placeable": "Lavaproof Backtank Placeable",
-  "item.create.netherite_diving_boots": "Lavaproof Diving Boots",
-  "item.create.netherite_diving_helmet": "Lavaproof Diving Helmet",
-  "item.create.netherite_diving_helmet.tooltip.summary": "Together with a _Lavaproof Backtank_, this can protect you from _extreme heat_. To be effective, _Legs and Feet_ have to be covered in _Lavaproof_, too."
+  "advancement.create.diving_suit_lava.desc": "尝试用你的铱潜水装备在岩浆中潜水",
+  "block.create.netherite_backtank": "防岩浆背罐",
+  "item.create.netherite_backtank": "防岩浆背罐",
+  "item.create.netherite_backtank_placeable": "防岩浆背罐可放置",
+  "item.create.netherite_diving_boots": "防岩浆潜水靴",
+  "item.create.netherite_diving_helmet": "防岩浆潜水头盔",
+  "item.create.netherite_diving_helmet.tooltip.summary": "与_防岩浆背罐_一起，可以保护你免受_极端高温_。为了有效，_腿部和脚部_也必须覆盖_防岩浆_装备。"
 }
