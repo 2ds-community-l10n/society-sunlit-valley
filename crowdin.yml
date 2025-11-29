@@ -1,0 +1,5 @@
+files:
+  - source: '*/en_us.json'
+    ignore:
+      - /FTBLang
+    translation: /%original_path%/%language%.json
