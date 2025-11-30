@@ -2,4 +2,5 @@ files:
   - source: '*/en_us.json'
     ignore:
       - /FTBLang
+      - /config
     translation: /%original_path%/%language%.json
