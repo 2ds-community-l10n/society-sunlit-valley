@@ -6,8 +6,8 @@
   "block.dramaticdoors.short_md_netherite_door": "矮铱门",
   "block.dramaticdoors.short_netherite_door": "矮铱门",
   "block.dramaticdoors.tall_netherite_door": "高铱门",
-  "block.dramaticdoors.short_meadow_pine_door": "矮高山门",
-  "block.dramaticdoors.short_meadow_pine_barn_door": "矮高山谷仓门",
-  "block.dramaticdoors.tall_meadow_pine_door": "高阿尔卑斯门",
-  "block.dramaticdoors.tall_meadow_pine_barn_door": "高阿尔卑斯谷仓门"
+  "block.dramaticdoors.short_meadow_pine_door": "矮高山木门",
+  "block.dramaticdoors.short_meadow_pine_barn_door": "矮高山木谷仓门",
+  "block.dramaticdoors.tall_meadow_pine_door": "高高山木门",
+  "block.dramaticdoors.tall_meadow_pine_barn_door": "高高山木谷仓门"
 }
