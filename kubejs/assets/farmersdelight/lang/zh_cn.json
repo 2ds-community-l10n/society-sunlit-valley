@@ -9,10 +9,10 @@
   "block.farmersdelight.rich_soil": "菌殖土",
   "block.farmersdelight.rich_soil_farmland": "菌殖土耕地",
   "farmersdelight.advancement.get_rich_soil": "蘑菇食物",
-  "farmersdelight.advancement.get_rich_soil.desc": "蘑菇土在上面种植时会生长菌落！",
-  "block.farmersdelight.rope": "绳子",
-  "farmersdelight.advancement.harvest_ropelogged_tomato.desc": "将农用绳索挂在番茄作物上方，使其长得更高",
+  "farmersdelight.advancement.get_rich_soil.desc": "种植在菌殖土上的菌类会形成菌落！",
+  "block.farmersdelight.rope": "农用绳",
+  "farmersdelight.advancement.harvest_ropelogged_tomato.desc": "在番茄作物上方悬挂一些农耕绳使其长得更高",
   "item.farmersdelight.minced_beef": "生牛肉饼",
   "item.farmersdelight.netherite_knife": "铱刀",
-  "farmersdelight.advancement.obtain_netherite_knife.desc": "花费一整块铱锭来升级你的刀！或者离开厨房。"
+  "farmersdelight.advancement.obtain_netherite_knife.desc": "拿出一整块铱锭升级你的刀！要么就滚出厨房。"
 }
