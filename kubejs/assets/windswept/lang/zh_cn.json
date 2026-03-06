@@ -1,11 +1,18 @@
 {
-  "block.windswept.gingerbread_block": "抛光姜饼块",
-  "block.windswept.gingerbread_brick_slab": "抛光姜饼砖板",
-  "block.windswept.gingerbread_brick_stairs": "抛光姜饼砖楼梯",
-  "block.windswept.gingerbread_brick_wall": "抛光姜饼砖墙",
-  "block.windswept.gingerbread_bricks": "抛光姜饼砖",
-  "block.windswept.gingerbread_cookie_block": "抛光姜饼饼干块",
-  "block.windswept.gingerbread_door": "抛光姜饼门",
-  "block.windswept.gingerbread_trapdoor": "抛光姜饼活板门",
-  "item.windswept.lavender_tea": "蜂蜜薰衣草茶"
+  "block.windswept.gingerbread_block": "磨制姜饼块",
+  "block.windswept.gingerbread_brick_slab": "磨制姜饼砖台阶",
+  "block.windswept.gingerbread_brick_stairs": "磨制姜饼砖楼梯",
+  "block.windswept.gingerbread_brick_wall": "磨制姜饼砖墙",
+  "block.windswept.gingerbread_bricks": "磨制姜饼砖",
+  "block.windswept.gingerbread_cookie_block": "磨制姜饼曲奇块",
+  "block.windswept.gingerbread_door": "磨制姜饼门",
+  "block.windswept.gingerbread_trapdoor": "磨制姜饼活板门",
+  "item.windswept.lavender_tea": "蜜香熏衣茶",
+  "windswept.jei.info.wooden_bucket": "木桶很容易制作；但其强度会受到影响。当液体从桶中流出时，会消耗耐久度。",
+  "item.windswept.wooden_bucket": "木桶",
+  "item.windswept.wooden_chocolate_bucket": "木制巧克力桶",
+  "item.windswept.wooden_honey_bucket": "木制蜂蜜桶",
+  "item.windswept.wooden_milk_bucket": "木制牛奶桶",
+  "item.windswept.wooden_powder_snow_bucket": "木制细雪桶",
+  "item.windswept.wooden_water_bucket": "木制水桶"
 }
