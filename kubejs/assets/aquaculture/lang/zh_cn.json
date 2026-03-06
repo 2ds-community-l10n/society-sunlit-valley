@@ -9,7 +9,7 @@
   "aquaculture.redstone_hook.tooltip.title": "水母捕手",
   "aquaculture.redstone_hook.tooltip.desc": "+10% 几率捕获 1-2 只水母",
   "aquaculture.light_hook.tooltip.title": "轻型",
-  "item.aquaculture.nether_star_hook": "海渊之钩",
+  "item.aquaculture.nether_star_hook": "海王星灌注钓钩",
   "aquaculture.nether_star_hook.tooltip.title": "遗物猎手",
-  "aquaculture.nether_star_hook.tooltip.desc": "4% 几率捕捉遗物宝箱，提升幸运等级"
+  "aquaculture.nether_star_hook.tooltip.desc": "4% 几率捕获遗物宝箱，同时提升幸运等级"
 }
