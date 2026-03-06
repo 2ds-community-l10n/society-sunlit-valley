@@ -20,6 +20,10 @@
     "icon": "society:milk_pail"
   },
   {
+    "regex": "^\\Qmastery\\E$",
+    "icon": "society:sunlit_pearl"
+  },
+  {
     "regex": "^\\Qmining\\E$",
     "icon": "netherite_pickaxe"
   }

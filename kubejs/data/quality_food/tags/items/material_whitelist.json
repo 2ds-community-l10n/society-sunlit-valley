@@ -7,6 +7,7 @@
     "minecraft:ink_sac",
     "minecraft:hay_block",
     "minecraft:honey_block",
+    "autumnity:turkey",
     "#forge:eggs",
     "#society:large_eggs",
     "#forge:seeds",
@@ -18,6 +19,10 @@
     "netherdepthsupgrade:soulsucker",
     "aquaculture:jellyfish",
     "species:petrified_egg",
+    "herbalbrews:dried_green_tea_leaf_block",
+    "herbalbrews:black_tea_leaf_block",
+    "herbalbrews:oolong_tea_leaf_block",
+    "herbalbrews:mixed_tea_leaf_block",
     "vintagedelight:golden_egg",
     "minecraft:sniffer_egg",
     "farmlife:tribull_cheese_wheel",
@@ -27,6 +32,7 @@
     "meadow:grain_cheese_block",
     "meadow:amethyst_cheese_block",
     "meadow:buffalo_cheese_block",
+    "veggiesdelight:garlic_seed",
     {
       "id": "species:ichor_bottle",
       "required": false

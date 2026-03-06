@@ -250,21 +250,37 @@ const rawLogs = [
   "atmospheric:crustose_log",
   "atmospheric:grimwood_log",
   "vintagedelight:magic_vine",
-  "vanillabackport:pale_oak_log",
-];
+  "minecraft:pale_oak_log",
+  "cluttered:willow_log",
+  "cluttered:flowering_willow_log",
+  "cluttered:poplar_log",
+  "cluttered:flowering_poplar_log",
+  "cluttered:crabapple_log",
+  "cluttered:flowering_crabapple_log",
+  "cluttered:sycamore_log",
+  "cluttered:fluorescent_maple_log",
+  "cluttered:blue_mushroom_log",
+  "cluttered:red_mushroom_log",
+  "rainbowoaks:rainbow_log",
+  "minecraft:warped_stem",
+  "minecraft:crimson_stem"
+]
 ServerEvents.tags("item", (e) => {
   // Misc tags
+  e.add("stardew_fishing:bobbers", "society:needle_bobber");
+  e.add("stardew_fishing:bobbers", "society:net_bobber");
   e.add("forge:plates/lead", "oreganized:lead_sheet");
   e.add("forge:plates", "oreganized:lead_sheet");
   e.add("forge:plates/silver", "oreganized:silver_sheet");
   e.add("forge:plates", "oreganized:silver_sheet");
-  e.add("forge:crops", "society:ancient_fruit");
   e.add("forge:salt", "meadow:alpine_salt");
   e.add("forge:crops", "society:tubabbaco");
+  e.add("forge:crops", "society:eggplant");
+  e.add("forge:crops", "farm_and_charm:strawberry");
+  e.add("forge:crops", "herbalbrews:green_tea_leaf");
+  e.add("forge:crops/cabbage", "farm_and_charm:lettuce");
   e.add("forge:grapes", "nethervinery:warped_grape");
   e.add("forge:grapes", "nethervinery:crimson_grape");
-  e.add("forge:crops", "society:eggplant");
-  e.add("forge:crops/cabbage", "farm_and_charm:lettuce");
   e.add("forge:vegetables/eggplant", "society:eggplant");
   e.add("forge:vegetables", "society:eggplant");
   e.add("meadow:water_bottles", "herbalbrews:water_cup");
@@ -280,8 +296,10 @@ ServerEvents.tags("item", (e) => {
   e.add("meadow:cheese_blocks", "meadow:amethyst_cheese_block");
   e.add("netherdepthsupgrade:lava_fishing_rod", "forge:tools/fishing_rods");
   e.add("forge:rope", "brewery:rope");
+  e.add("forge:cobblestone", "meadow:cobbled_limestone");
   e.remove("forge:chests/ender", "minecraft:ender_chest");
   e.remove("forge:chests", "minecraft:ender_chest");
+  e.remove("whimsy_deco:gatcha_machine_accepts", "minecraft:diamond");
   // Vinery leaf fix
   e.add("minecraft:mineable/hoe", "vinery:apple_leaves");
   e.add("minecraft:mineable/hoe", "vinery:dark_cherry_leaves");
@@ -321,10 +339,28 @@ ServerEvents.tags("item", (e) => {
     "society:crystalberry",
     "society:cranberry",
     "society:blueberry",
+    "society:mossberry",
   ].forEach((berry) => {
     e.add("forge:crops", berry);
     e.add("forge:berries", berry);
     e.add("forge:fruits", berry);
+  });
+  ["society:ancient_fruit", "society:mana_fruit", "society:sparkpod"].forEach(
+    (berry) => {
+      e.add("forge:crops", berry);
+      e.add("forge:fruits", berry);
+    }
+  );
+  [
+    "cluttered:fly_agaric",
+    "species:alphacene_mushroom",
+    "verdantvibes:bracket_mushroom",
+    "cluttered:blue_roundhead",
+    "quark:glow_shroom",
+    "minecraft:warped_fungus",
+    "minecraft:crimson_fungus",
+  ].forEach((shroom) => {
+    e.add("forge:mushrooms", shroom);
   });
   [
     "minecraft:apple",
@@ -372,28 +408,43 @@ ServerEvents.tags("item", (e) => {
   global.preserves.forEach((preserve) => {
     e.add("society:preserves", preserve.item);
   });
-  global.lootFurniture.forEach((item) => {
-    e.add("society:loot_furniture", item);
-  });
   global.plushies.forEach((item) => {
     e.add("society:plushies", item);
   });
   global.dehydratorRecipes.forEach((dehydratee) => {
-    e.add("society:dehydrated", dehydratee.output[0].substring(2, dehydratee.output[0].length));
+    e.add(
+      "society:dehydrated",
+      dehydratee.output[0].substring(2, dehydratee.output[0].length)
+    );
   });
   global.fish.forEach((fish) => {
     const splitFish = fish.item.split(":");
     let fishId = splitFish[1];
-    if (["barrel", "roe", "meat"].some((denied) => splitFish[1].includes(denied))) return;
+    if (
+      ["barrel", "roe", "meat"].some((denied) => splitFish[1].includes(denied))
+    )
+      return;
     if (fishId.includes("raw_")) {
       if (fishId === "raw_snowflake") fishId = "frosty_fin";
       else fishId = fishId.substring(4, fishId.length);
     }
 
-    e.add(`crabbersdelight:jei_display_results/society/${fishId}_bait`, fish.item);
+    e.add(
+      `crabbersdelight:jei_display_results/society/${fishId}_bait`,
+      fish.item
+    );
   });
   global.agedRoe.forEach((preserve) => {
     e.add("society:aged_roe", preserve.item);
+  });
+  global.geodeList.forEach((mineral) => {
+    e.add("society:mineral", mineral.item);
+  });
+  global.frozenGeodeList.forEach((mineral) => {
+    e.add("society:mineral", mineral.item);
+  });
+  global.magmaGeodeList.forEach((mineral) => {
+    e.add("society:mineral", mineral.item);
   });
   global.pristine.forEach((mineral) => {
     e.add("society:pristine_mineral", mineral.item);
@@ -404,13 +455,15 @@ ServerEvents.tags("item", (e) => {
     "society:large_duck_egg",
     "society:large_goose_egg",
     "society:large_turkey_egg",
-  ].forEach((egg) => {
-    e.add("society:large_eggs", egg);
-  });
+    "society:large_galliraptor_egg", 
+    "society:penguin_egg", 
+    "society:flamingo_egg"].forEach((egg) => {
+      e.add("society:large_eggs", egg);
+    });
   rawLogs.forEach((log) => {
     e.add("society:raw_logs", log);
   });
-  e.add("forge:stripped_logs", "vanillabackport:stripped_pale_oak_log");
+  e.add("forge:stripped_logs", "minecraft:stripped_pale_oak_log");
   [
     "twigs:tangerine_seashell",
     "twigs:roseate_seashell",
@@ -436,10 +489,13 @@ ServerEvents.tags("item", (e) => {
   ].forEach((mirror) => {
     e.add("society:mirrors", mirror);
   });
-  ["society:oak_resin", "society:maple_syrup", "society:pine_tar"].forEach((bottle) => {
-    e.add("create:upright_on_belt", bottle);
-  });
+  ["society:oak_resin", "society:maple_syrup", "society:pine_tar"].forEach(
+    (bottle) => {
+      e.add("create:upright_on_belt", bottle);
+    }
+  );
   e.add("create:crushed_raw_materials", "create:crushed_raw_bismuth");
+  e.add("forge:raw_materials", "etcetera:raw_bismuth");
   e.add("splendid_slimes:slime_vac_fireable", "#society:omni_geode_treasure");
   e.add("splendid_slimes:slime_vac_fireable", "#society:preserves");
   e.add("splendid_slimes:slime_vac_fireable", "minecraft:bone");
@@ -450,11 +506,16 @@ ServerEvents.tags("item", (e) => {
   });
 
   Color.DYE.forEach((color) => {
-    e.add("society:botania_seeds", `botania_seeds:${color}_mystical_flower_seed`);
+    e.add(
+      "society:botania_seeds",
+      `botania_seeds:${color}_mystical_flower_seed`
+    );
   });
-  ["society:animal_feed", "society:candied_animal_feed", "society:mana_feed"].forEach((item) =>
-    e.add("society:animal_feed", item)
-  );
+  [
+    "society:animal_feed",
+    "society:candied_animal_feed",
+    "society:mana_feed",
+  ].forEach((item) => e.add("society:animal_feed", item));
   [
     "aquaculture:jellyfish",
     "aquaculture:goldfish",
@@ -471,7 +532,14 @@ ServerEvents.tags("item", (e) => {
       e.add("refurbished_furniture:outdoors", item);
     else e.add("refurbished_furniture:kitchen", item);
   });
-  const fantasyCategories = ["nordic", "dunmer", "venthyr", "bone", "royal", "necrolord"];
+  const fantasyCategories = [
+    "nordic",
+    "dunmer",
+    "venthyr",
+    "bone",
+    "royal",
+    "necrolord",
+  ];
   Ingredient.of("@fantasyfurniture").stacks.forEach((item) => {
     if (item.toString().includes("furniture_station")) return;
     e.add("refurbished_furniture:bathroom", item.id);
@@ -532,6 +600,7 @@ ServerEvents.tags("item", (e) => {
     "society:jade",
     "society:sparkstone",
     "society:prismatic_shard",
+    "society:spinel"
   ].forEach((item) => {
     e.add("forge:gems", item);
   });
@@ -543,28 +612,37 @@ ServerEvents.tags("item", (e) => {
   ].forEach((item) => {
     e.add("splendid_slimes:animal_spawn_eggs", item);
   });
+  e.add("society:sellable", "splendid_slimes:plort");
+  e.add("society:sellable", "splendid_slimes:slime_heart");
+  e.add("society:farmer_product", "splendid_slimes:plort");
+  e.add("society:farmer_product", "splendid_slimes:slime_heart");
+  Array.from(global.trades.keys()).forEach((trade) => {
+    if (!trade.includes("plort") && !trade.includes("slime_heart")) {
+      let tradeDef = global.trades.get(trade);
+      e.add("society:sellable", trade);
+      switch (tradeDef.multiplier) {
+        case "shippingbin:crop_sell_multiplier":
+          e.add("society:farmer_product", trade);
+          break;
+        case "shippingbin:gem_sell_multiplier":
+          e.add("society:geologist_product", trade);
+          break;
+        case "shippingbin:wood_sell_multiplier":
+          e.add("society:artisan_product", trade);
+          break;
+        case "shippingbin:meat_sell_multiplier":
+        default:
+          e.add("society:adventurer_product", trade);
+      }
+    }
+  });
 });
 
 ServerEvents.tags("block", (e) => {
   e.add("minecraft:crops", "farmersdelight:tomatoes");
   const buildingGadgetsDeny = [
-    "society:aging_cask",
-    "society:ancient_cask",
-    "society:charging_rod",
     "society:coin_leaderboard",
-    "society:deluxe_worm_farm",
-    "society:fish_pond",
-    "society:loom",
-    "society:crystalarium",
-    "society:espresso_machine",
-    "society:fish_smoker",
-    "society:mayonnaise_machine",
-    "society:preserves_jar",
     "society:prize_machine",
-    "society:seed_maker",
-    "society:dehydrator",
-    "society:recycling_machine",
-    "society:tapper",
     "translocators:item_translocator",
     "cb_multipart:multipart",
     "translocators:fluid_translocator",
@@ -573,6 +651,7 @@ ServerEvents.tags("block", (e) => {
     "minecraft:spawner",
     "trials:trial_vault",
     "trials:trial_vault_ominous",
+    "fastpaintings:painting",
     "fastpaintings:painting",
     "lootr:lootr_barrel",
     "lootr:lootr_chest",
@@ -610,6 +689,18 @@ ServerEvents.tags("block", (e) => {
   });
   global.plushies.forEach((item) => {
     e.add("quality_foods:quality_blocks", item);
+    e.add("society:plushies", item);
+  });
+  global.lootFurniture.forEach((furniture) => {
+    e.add("society:loot_furniture", furniture);
+  });
+
+  [
+    "society:prismatic_shard_block",
+    "society:sparkstone_block",
+    "aquaculture:neptunium_block"
+  ].forEach((item) => {
+    e.add("minecraft:beacon_base_blocks", item);
   });
   e.remove("minecraft:dirt", "farmersdelight:rich_soil");
   rawLogs.forEach((log) => {
@@ -633,8 +724,15 @@ ServerEvents.tags("block", (e) => {
   ].forEach((wool) => {
     e.add("minecraft:mineable/axe", wool);
   });
-  global.tapperRecipes.forEach((recipe) => {
-    e.add("society:tappable_blocks", recipe.input);
+  Array.from(global.tapperRecipes.keys()).forEach((key) => {
+    e.add("society:tappable_blocks", key);
+  });
+  Array.from(global.mushroomLogRecipes.keys()).forEach((key) => {
+    e.add("society:mushroom_log_detects", key);
+  });
+  Array.from(global.dominantMushroomLogBlocks.keys()).forEach((key) => {
+    e.add("society:mushroom_log_detects", key);
+    e.add("society:mushroom_log_dominant", key);
   });
   const unbreakableTags = [
     "minecraft:wither_immune",
@@ -672,7 +770,9 @@ ServerEvents.tags("block", (e) => {
   flowersMissingBlockTags.forEach((flower) => {
     e.add("minecraft:flowers", flower);
     e.add(
-      flower !== "meadow:eriophorum_tall" ? "minecraft:small_flowers" : "minecraft:tall_flowers",
+      flower !== "meadow:eriophorum_tall"
+        ? "minecraft:small_flowers"
+        : "minecraft:tall_flowers",
       flower
     );
   });
@@ -681,12 +781,16 @@ ServerEvents.tags("block", (e) => {
   global.artisanMachineIds.forEach((log) => {
     e.add("society:artisan_machine", log);
     e.add("society:golden_clock_advanced", log);
+    e.add("buildinggadgets2:deny", log);
   });
   const agingCasks = ["society:aging_cask", "society:ancient_cask"];
   agingCasks.forEach((log) => {
     e.add("society:aging_cask", log);
   });
-  const randomTickMachines = ["society:charging_rod", "society:espresso_machine"];
+  const randomTickMachines = [
+    "society:charging_rod",
+    "society:espresso_machine",
+  ];
   randomTickMachines.forEach((log) => {
     e.add("society:artisan_machine", log);
   });
@@ -716,27 +820,9 @@ ServerEvents.tags("block", (e) => {
     e.add("oreganized:mineable/scribe", item);
   });
 
-  [
-    "pamhc2trees:pamcinnamon",
-    "pamhc2trees:pamdragonfruit",
-    "pamhc2trees:pamstarfruit",
-    "pamhc2trees:pamlychee",
-    "pamhc2trees:pampassionfruit",
-    "pamhc2trees:pammango",
-    "pamhc2trees:pambanana",
-    "pamhc2trees:pampawpaw",
-    "pamhc2trees:pamhazelnut",
-    "pamhc2trees:pamorange",
-    "pamhc2trees:pamplum",
-    "pamhc2trees:pampeach",
-    "pamhc2trees:pamlemon",
-    "pamhc2trees:pamcherry",
-    "pamhc2trees:pamapple",
-  ].forEach((item) => {
-    e.add("minecraft:sword_efficient", item);
-  });
   e.add("minecraft:mineable/axe", "beachparty:cabinet");
   e.add("minecraft:mineable/pickaxe", "bakery:iron_bench");
+  e.add("minecraft:mineable/shovel", "vinery:dirt_path_slab");
 });
 
 ServerEvents.tags("fluid", (e) => {
