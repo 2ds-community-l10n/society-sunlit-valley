@@ -1,12 +1,12 @@
 {
-	"quark.jei.hint.crab_info": "招潮蟹可以在海滩找到，可以用小麦、鸡肉或任何类型的鱼繁殖。",
-	"item.quark.crab_bucket": "一桶招潮蟹",
+	"quark.jei.hint.crab_info": "招潮蟹可以在海滩找到，并且可以用小麦、鸡肉或任何种类的鱼进行繁殖。",
+	"item.quark.crab_bucket": "招潮蟹桶",
 	"item.quark.crab_leg": "生招潮蟹腿",
 	"item.quark.cooked_crab_leg": "熟招潮蟹腿",
 	"item.quark.crab_shell": "招潮蟹壳",
-	"item.quark.crab_spawn_egg": "招潮蟹生成蛋",
-	"item.quark.foxhound_spawn_egg": "狐猎犬生成箱",
+	"item.quark.crab_spawn_egg": "招潮蟹刷怪蛋",
+	"item.quark.foxhound_spawn_egg": "箱装狐猎犬",
 	"entity.quark.crab": "招潮蟹",
 	"tag.item.quark.crab_tempt_items": "招潮蟹饲料",
-	"advancements.quark.crab_in_a_bucket.description": "用桶捕获一只招潮蟹"
+	"advancements.quark.crab_in_a_bucket.description": "用桶捕捉一只招潮蟹"
 }
