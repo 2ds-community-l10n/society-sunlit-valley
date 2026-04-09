@@ -963,7 +963,7 @@
 	"dialog.npc.shepherd.chatter_friendship3.5.line_1": "……好蓬松……",
 	"dialog.npc.shepherd.chatter_friendship3.6.line_0": "卡洛琳特别喜欢山羊奶酪。",
 	"dialog.npc.shepherd.chatter_friendship3.6.line_1": "别说是我说的！我还想再多了解一些秘密……",
-	"dialog.npc.shepherd.chatter_friendship3.7.line_0": "里昂在市场里存了缝纫用品。",
+	"dialog.npc.shepherd.chatter_friendship3.7.line_0": "里昂在市场里留了缝纫用品。",
 	"dialog.npc.shepherd.chatter_friendship3.7.line_1": "你要是想要教学的话可以说一声！",
 	"dialog.npc.shepherd.chatter_friendship3.8.line_0": "卡洛琳的品味挺高级的。",
 	"dialog.npc.shepherd.chatter_friendship3.8.line_1": "大多数人都不懂得该怎么鉴别上等的美利奴羊毛。",
@@ -1078,8 +1078,8 @@
 	"dialog.npc.shepherd.gift_hated.9.line_0": "抱歉，但是我真的不想要这个……",
 	"dialog.npc.shepherd.gift_hated.10.line_0": "This might be the worst thing I've ever been given...",
 	"dialog.npc.shepherd.unique_five_gift.line_0": "你好啊@i，你能帮我个小忙吗？",
-	"dialog.npc.shepherd.unique_five_gift.line_1": "艾斯去冰冻废土探险的时候发现了这些企鹅，并且让我照顾好它们。",
+	"dialog.npc.shepherd.unique_five_gift.line_1": "艾斯去极寒废土探险的时候带回来了这些企鹅，并且让我照顾好它们。",
 	"dialog.npc.shepherd.unique_five_gift.line_2": "我不是想让你抗下这个责任，但是我相信你会给予它们应得的待遇。",
-	"dialog.npc.shepherd.unique_five_gift.line_3": "Unfortunately I don't have the means to build up a proper ice habitat, they wouldn't be happy with me.",
-	"dialog.npc.shepherd.unique_five_gift.line_4": "If you're struggling with their mood, just pick up a mood scanner at my shop! It should be pretty cheap for you."
+	"dialog.npc.shepherd.unique_five_gift.line_3": "因为不幸的是我没办法给它们建立一个寒冷的栖息地，它们跟着我不会开心的。",
+	"dialog.npc.shepherd.unique_five_gift.line_4": "要是你琢磨不透它们，可以在我这买一台心情扫描仪！给你算便宜点。"
 }
