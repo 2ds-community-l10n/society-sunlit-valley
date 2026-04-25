@@ -193,7 +193,7 @@
 	"dialog.npc.banker.unique_five_gift_read.line_3": "拿着这些远古之石，然后好好的做做时间管理。我可不想让你把时间都浪费在跑腿上。",
 	"dialog.npc.banker.unique_five_gift_read.line_4": "行了，赶紧走吧，别再让我失望了。",
 	"dialog.npc.blacksmith.name": "艾登",
-	"dialog.npc.blacksmith.chatter.description": "跟艾登聊天",
+	"dialog.npc.blacksmith.chatter.description": "与艾登聊天",
 	"dialog.npc.blacksmith.chatter_friendship0.0.line_0": "嘿呀，需要点什么？",
 	"dialog.npc.blacksmith.chatter_friendship0.1.line_0": "你终于再帮这些工具升级了吗？",
 	"dialog.npc.blacksmith.chatter_friendship0.2.line_0": "我能帮你做点什么， @i？",
